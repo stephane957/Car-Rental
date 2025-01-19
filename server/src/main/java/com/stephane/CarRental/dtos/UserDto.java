@@ -19,11 +19,11 @@ public class UserDto {
     @NotBlank(message = "User name required")
     private String name;
 
-    @Email(message = "The email address is invalid.", flags = { Pattern.Flag.CASE_INSENSITIVE })
+    @Email
     @NotNull
     private String email;
 
-    @NotEmpty
+    @NotNull
     private String password;
 
     @NotNull(message = "User role required")
