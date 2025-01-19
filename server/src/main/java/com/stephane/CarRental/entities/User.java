@@ -4,6 +4,7 @@ import com.stephane.CarRental.Enums.UserRole;
 import jakarta.persistence.*;
 import lombok.*;
 import org.hibernate.annotations.CreationTimestamp;
+import org.springframework.format.annotation.DateTimeFormat;
 
 import java.util.Date;
 
@@ -32,5 +33,6 @@ public class User {
 
     @CreationTimestamp
     @Column(updatable = false, name = "created_at")
+    @DateTimeFormat(pattern = "dd/MM/yyyy")
     private Date createdAt;
 }
