@@ -1,12 +1,11 @@
 package com.stephane.CarRental.dtos;
 
 import com.stephane.CarRental.Enums.UserRole;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+
+import java.util.Date;
 
 @AllArgsConstructor
 @NoArgsConstructor
@@ -22,4 +21,6 @@ public class UserDto {
     private String password;
 
     private UserRole userRole;
+
+    private Date createdAt;
 }
